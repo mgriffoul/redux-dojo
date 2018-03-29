@@ -3,6 +3,7 @@ var path = require('path');
 
 module.exports = {
     entry: {
+		reduxExample: './src/js/redux-example/main.js',
 		page1: './src/js/page1.js',
 		page2: './src/js/page2.js'
 	},
@@ -29,6 +30,11 @@ module.exports = {
 			template: './src/index.html',
 			filename: 'index.html',
 			chunks: []
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/reduxExample.html',
+			filename: 'reduxExample.html',
+			chunks: ['reduxExample']
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',

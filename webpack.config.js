@@ -3,13 +3,16 @@ var path = require('path');
 
 module.exports = {
     entry: {
-		reduxExample: './src/js/redux-example/main.js',
+		reduxInit: './src/js/redux-example/init/index.js',
+		reduxWithRedux: './src/js/redux-example/with-redux/index.js',
+		reduxWithReact: './src/js/redux-example/with-react-redux/index.js',
 		page1: './src/js/page1.js',
 		page2: './src/js/page2.js'
 	},
     output: {
         filename: '[name].bundle.js'
     },
+	devtool: 'source-map',
     module: {
         rules: [
             {
@@ -19,7 +22,7 @@ module.exports = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['env', 'react'],
-						plugins: ['transform-object-rest-spread']
+						plugins: ['transform-object-rest-spread', 'transform-class-properties']
 					}
 				}
             }
@@ -32,9 +35,19 @@ module.exports = {
 			chunks: []
 		}),
 		new HtmlWebpackPlugin({
-			template: './src/reduxExample.html',
-			filename: 'reduxExample.html',
-			chunks: ['reduxExample']
+			template: './src/redux.tpl.html',
+			filename: 'reduxInit.html',
+			chunks: ['reduxInit']
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/redux.tpl.html',
+			filename: 'reduxWithRedux.html',
+			chunks: ['reduxWithRedux']
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/reduxWithReact.tpl.html',
+			filename: 'reduxWithReact.html',
+			chunks: ['reduxWithReact']
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',

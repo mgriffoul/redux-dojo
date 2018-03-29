@@ -8,7 +8,6 @@ const DisplayName = (props) => {
 class NameComponent extends React.Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {name: "John Doe"}
 	}
 
@@ -20,10 +19,10 @@ class NameComponent extends React.Component {
 
 	render() {
 		return (<div>
-				<DisplayName name={this.state.name}/>
-				<input ref={(el) => this.inputRef = el } type="text" />
-				<button type="button" onClick={() => this.setName()}>Change Name</button>
-			</div>)
+			<DisplayName name={this.state.name}/>
+			<input ref={(el) => this.inputRef = el } type="text"/>
+			<button type="button" onClick={() => this.setName()}>Change Name</button>
+		</div>)
 	}
 }
 

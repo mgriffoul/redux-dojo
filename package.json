@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack:dev": "webpack --mode development",
-    "start:dev": "webpack-dev-server --mode development",
-    "bundle": "node ./module/bundle/main.bundle.js"
+    "start:dev": "webpack-dev-server --mode development"
   },
   "author": "",
   "license": "ISC",

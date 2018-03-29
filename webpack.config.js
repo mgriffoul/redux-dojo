@@ -6,8 +6,8 @@ module.exports = {
 		reduxInit: './src/js/redux-example/init/index.js',
 		reduxWithRedux: './src/js/redux-example/with-redux/index.js',
 		reduxWithReact: './src/js/redux-example/with-react-redux/index.js',
-		page1: './src/js/page1.js',
-		page2: './src/js/page2.js'
+		reactExample1: './src/js/react/example1/index.js',
+		reactExercice: './src/js/react/exercice/index.js',
 	},
     output: {
         filename: '[name].bundle.js'
@@ -51,13 +51,13 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
-			filename: 'page1.html',
-			chunks: ['page1']
+			filename: 'reactExample1.html',
+			chunks: ['reactExample1']
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
-			filename: 'page2.html',
-			chunks: ['page2']
+			filename: 'reactExercice.html',
+			chunks: ['reactExercice']
 		}),
 	],
 	resolve: {

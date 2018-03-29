@@ -7,6 +7,7 @@ module.exports = {
 		reduxWithRedux: './src/js/redux-example/with-redux/index.js',
 		reduxWithReact: './src/js/redux-example/with-react-redux/index.js',
 		reactExample1: './src/js/react/example1/index.js',
+		reactExample2: './src/js/react/example2/index.js',
 		reactExercice: './src/js/react/exercice/index.js',
 	},
     output: {
@@ -53,6 +54,11 @@ module.exports = {
 			template: './src/index.html',
 			filename: 'reactExample1.html',
 			chunks: ['reactExample1']
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/index.html',
+			filename: 'reactExample2.html',
+			chunks: ['reactExample2']
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',

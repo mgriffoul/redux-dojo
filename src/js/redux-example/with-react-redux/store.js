@@ -20,11 +20,12 @@ const itemReducer = (state, action) => {
 };
 
 /* STORE */
+const middleware = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() || undefined;
 
 const store = createStore(
     itemReducer, 
-    initialState, 
-    window.__REDUX_DEVTOOLS_EXTENSION__());
+    initialState,
+	middleware);
 
 export default store;
 
